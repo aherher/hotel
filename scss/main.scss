@@ -1,0 +1,372 @@
+@charset "utf-8";
+@import './mixin';
+
+body {
+  background-color: #f4f1e6;
+}
+
+.mainVisual {
+  background: url(../images/main/background-twilight.png);
+  background-size: cover;
+  height: 80rem;
+}
+
+.selects {
+  @include flexAlign;
+  gap: 2rem;
+  width: 95%;
+  max-width: 61rem;
+  margin: 0 auto;
+
+  li {
+    text-align: center;
+    width: 48%;
+    height: 10rem;
+    border: 2px solid $orange;
+
+    a {
+      color: $orange;
+      height: 100%;
+      transition: all 0.5s;
+      @include flexAlign;
+
+      &:hover {
+        color: #fff;
+        background-color: $orange;
+      }
+    }
+  }
+
+  dl {
+    font-weight: 600;
+
+    dt {
+      font-size: clamp(3rem, 5vw, 4.5rem);
+      margin-bottom: 0.4em;
+    }
+
+    dd {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.sectionDl {
+  text-align: center;
+
+  dt {
+    color: $orange;
+    font-size: clamp(2.2rem, 3vw, 2.8rem);
+    line-height: 1.1;
+    letter-spacing: 0.2em;
+    margin-bottom: 0.4em;
+  }
+
+  dd {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
+
+.mainArticle {
+  text-align: center;
+  // width: 95%;
+  // max-width: 120rem;
+  margin: clamp(7rem, 4vw, 150rem) auto;
+
+  &__texts {
+    margin-top: 4rem;
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+}
+
+.banners {
+  background-color: #0c1522;
+  padding: 4rem 0;
+
+  &__lists {
+    li {
+      max-width: 43rem;
+      padding-bottom: 3rem;
+      position: relative;
+      margin: 0 auto;
+
+      .backplant {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        z-index: 0;
+
+        &:after {
+          content: '';
+          display: block;
+          // padding-bottom: 75.39130434783%;
+        }
+      }
+
+      .frontplant {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        pointer-events: none;
+
+        &:after {
+          content: '';
+          display: block;
+          // padding-bottom: 23.32474226804%;
+        }
+      }
+
+      &.list01 {
+        .backplant {
+          background: url(../images/main/three-links-behind-1.png) no-repeat center bottom;
+          background-size: contain;
+        }
+
+        .frontplant {
+          background: url(../images/main/three-links-front-1.png) no-repeat center bottom;
+          background-size: contain;
+        }
+      }
+
+      &.list02 {
+        .backplant {
+          background: url(../images/main/three-links-behind-2.png) no-repeat center bottom;
+          background-size: contain;
+        }
+
+        .frontplant {
+          background: url(../images/main/three-links-front-2.png) no-repeat center bottom;
+          background-size: contain;
+        }
+      }
+
+      &.list03 {
+        .backplant {
+          background: url(../images/main/three-links-behind-3.png) no-repeat center bottom;
+          background-size: contain;
+        }
+
+        .frontplant {
+          background: url(../images/main/three-links-front-3.png) no-repeat center bottom;
+          background-size: contain;
+        }
+      }
+    }
+  }
+
+  &__block {
+    background-color: #fff;
+    width: 60%;
+    height: 33rem;
+    margin: 0 auto;
+    text-align: center;
+    transition: all 0.5s;
+    z-index: 1;
+    position: relative;
+    @include flexAlign;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__dl {
+    padding: 1.5rem;
+
+    dt {
+      font-size: 2rem;
+      letter-spacing: 0.3rem;
+      text-transform: uppercase;
+      line-height: 1.5;
+      margin-bottom: 0.5em;
+      color: $orange;
+    }
+
+    dd {
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+  }
+
+  @include pc {
+    &__lists {
+      @include flexStart;
+
+      li {
+        width: 33.3333333%;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.gallerys {
+  &__lists {
+    margin: 3rem 0 clamp(6rem, 10vw, 10rem) 0;
+
+    li {
+      margin-bottom: 3rem;
+
+      .textArea {
+        background-color: #0c1522;
+        padding: 1.5rem;
+
+        .date {
+          color: $orange;
+          font-size: 1.6rem;
+          margin-bottom: 0.9em;
+        }
+
+        .title {
+          color: #fff;
+          font-size: 1.8rem;
+          font-weight: 600;
+          margin-bottom: 1.1em;
+        }
+
+        .moreLink {
+          color: #fff;
+          font-size: 1.6rem;
+          font-weight: 600;
+        }
+      }
+
+      &:hover {
+        .textArea {
+          .moreLink {
+            color: $orange;
+          }
+        }
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      @include centerX(absolute);
+      max-width: none;
+      height: 100%;
+      top: 0;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      padding-bottom: 110%;
+    }
+  }
+
+  &__view {
+    display: block;
+    background-color: $orange;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 4rem;
+    box-sizing: border-box;
+    border: 3px solid $orange;
+    transition: all 0.3s;
+
+    &:hover {
+      &:hover {
+        background-color: transparent;
+        color: $orange;
+      }
+    }
+  }
+
+  @include tablet {
+    &__lists {
+      li {
+        width: 32%;
+        margin-bottom: 0;
+      }
+
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.notice {
+  margin-top: clamp(6rem, 5vw, 110rem);
+
+  &__wrap {
+    @include flexStart;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+  }
+
+  &__box {
+    width: 48%;
+    margin-bottom: 7rem;
+
+    .title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 1em;
+
+      .number {
+        color: $orange;
+      }
+
+      .titleInner {}
+    }
+
+    .subtitle {
+      font-style: italic;
+      font-size: 1.6rem;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-bottom: 0.7em
+    }
+
+    .texts {
+      font-size: 1.6rem;
+      line-height: 1.6;
+      margin-bottom: 0.7em;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: $orange;
+      text-align: center;
+      font-size: 1.8rem;
+      color: #fff;
+      height: 4rem;
+      line-height: 3.4rem;
+      padding: 0 1.5rem;
+      box-sizing: border-box;
+      border: 3px solid $orange;
+      transition: all 0.3s;
+
+      &:hover {
+        &:hover {
+          background-color: transparent;
+          color: $orange;
+        }
+      }
+    }
+  }
+}
+
+.bottom {
+  &__title {
+    @include flexAlign;
+    color: $orange;
+    height: 12rem;
+    background-color: #0a2e41;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    font-size: 500;
+    letter-spacing: 0.2em;
+  }
+}
