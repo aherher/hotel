@@ -9,6 +9,31 @@ body {
   background: url(../images/main/background-twilight.png);
   background-size: cover;
   height: 80rem;
+  position: relative;
+  z-index: 0;
+  pointer-events: none;
+  margin-bottom: 30rem;
+
+  &__wrap {
+    @include centerX(absolute);
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+  }
+
+  .building {
+    background: url(../images/main/building.png);
+    width: 100%;
+    max-width: 65rem;
+    bottom: 0;
+    @include centerX(absolute);
+
+    &:after {
+      content: "";
+      display: block;
+      padding-bottom: 68.30015313936%;
+    }
+  }
 }
 
 .selects {
