@@ -21,9 +21,20 @@ body {
     bottom: 0;
   }
 
+  .leftLeaf01 {
+    width: 23.9rem;
+    height: 25.2rem;
+    background: url(../images/main/left_leaf01.png) no-repeat;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-200%);
+  }
+
   .building {
     background: url(../images/main/building.png);
-    width: 100%;
+    background-size: cover;
+    width: 60%;
     max-width: 65rem;
     bottom: 0;
     @include centerX(absolute);
