@@ -19,16 +19,166 @@ body {
     width: 100%;
     height: 100%;
     bottom: 0;
+
+    >div {
+      position: absolute;
+      left: 50%;
+    }
   }
 
   .leftLeaf01 {
     width: 23.9rem;
     height: 25.2rem;
     background: url(../images/main/left_leaf01.png) no-repeat;
-    position: absolute;
     bottom: 10%;
-    left: 50%;
     transform: translateX(-200%);
+  }
+
+  .rightBird {
+    width: 14.8rem;
+    height: 22.4rem;
+    background: url(../images/main/bird.png) no-repeat;
+    bottom: 10%;
+    transform: translateX(200%);
+  }
+
+  .bottom_left_leaf {
+    width: 18.8rem;
+    height: 22.4rem;
+    background: url(../images/main/bottom-left-leaf.png) no-repeat;
+    bottom: 0%;
+    transform: translateX(-200%);
+  }
+
+  .leftFlower {
+    width: 18.8rem;
+    height: 22.4rem;
+    background: url(../images/main/left-flower.png) no-repeat;
+    bottom: 0%;
+    transform: translateX(-200%);
+  }
+
+  .bottom_right_leaf {
+    width: 32.0rem;
+    height: 34.4rem;
+    background: url(../images/main/bottom_right_leaf.png) no-repeat;
+    bottom: -20%;
+    transform: translateX(50%);
+  }
+
+  .right_plant {
+    width: 25.4rem;
+    height: 38.7rem;
+    background: url(../images/main/right_plant.png) no-repeat;
+    bottom: 0%;
+    transform: translateX(150%);
+  }
+
+
+  .right_leaf {
+    width: 28.1rem;
+    height: 28.1rem;
+    background: url(../images/main/right_leaf.png) no-repeat;
+    bottom: 0%;
+    transform: translateX(80%);
+  }
+
+
+  .flamingos {
+    width: 19.6rem;
+    height: 26.7rem;
+    background: url(../images/main/flamingos.gif) no-repeat;
+    bottom: 0%;
+    transform: translateX(-80%);
+  }
+
+  .bottom_leaf_one {
+    width: 24rem;
+    height: 18.4rem;
+    background: url(../images/main/bottom_leaf_one.png) no-repeat;
+    bottom: -10%;
+    transform: translateX(-110%);
+  }
+
+  .bottom_leaf_two {
+    width: 25.5rem;
+    height: 30.0rem;
+    background: url(../images/main/bottom_leaf_two.png) no-repeat;
+    bottom: -20%;
+    transform: translateX(-80%);
+  }
+
+  .bottom_leaf_three {
+    width: 27.5rem;
+    height: 15.9rem;
+    background: url(../images/main/bottom_leaf_three.png) no-repeat;
+    bottom: -10%;
+    transform: translateX(-40%);
+  }
+
+  .bottom_left_lower {
+    width: 27.5rem;
+    height: 15.9rem;
+    background: url(../images/main/bottom_left_flower.png) no-repeat;
+    bottom: -10%;
+    transform: translateX(-120%);
+  }
+
+  .bottom_left_lower {
+    width: 27.5rem;
+    height: 15.9rem;
+    background: url(../images/main/bottom_left_flower.png) no-repeat;
+    bottom: -10%;
+    transform: translateX(-120%);
+  }
+
+  .bottom_right_butterfly {
+    width: 27.5rem;
+    height: 15.9rem;
+    background: url(../images/main/bottom_right_butterfly.png) no-repeat;
+    bottom: 00%;
+    transform: translateX(80%);
+  }
+
+  .bottom_right_flower {
+    width: 13.7rem;
+    height: 10.7rem;
+    background: url(../images/main/bottom_right_flower.png) no-repeat;
+    bottom: 00%;
+    transform: translateX(120%);
+  }
+
+  .bottom_flowers {
+    width: 23.9rem;
+    height: 25.5rem;
+    background: url(../images/main/bottom_flowers.png) no-repeat;
+    bottom: -15%;
+    transform: translateX(-30%);
+  }
+
+  .left_butterfly {
+    width: 8.4rem;
+    height: 6.5rem;
+    background: url(../images/main/left_butterfly.png) no-repeat;
+    bottom: 30%;
+    transform: translateX(-350%);
+  }
+
+  .middle_butterfly {
+    width: 7.9rem;
+    height: 7.0rem;
+    background: url(../images/main/middle_butterfly.png) no-repeat;
+    bottom: 10%;
+    transform: translateX(-250%);
+  }
+
+
+  .right_butterfly {
+    width: 3.6rem;
+    height: 3.2rem;
+    background: url(../images/main/butterfly_right.png) no-repeat;
+    bottom: 40%;
+    transform: translateX(250%);
   }
 
   .building {
@@ -159,42 +309,36 @@ body {
 
       &.list01 {
         .backplant {
-          background: url(../images/main/three-links-behind-1.png) no-repeat
-            center bottom;
+          background: url(../images/main/three-links-behind-1.png) no-repeat center bottom;
           background-size: contain;
         }
 
         .frontplant {
-          background: url(../images/main/three-links-front-1.png) no-repeat
-            center bottom;
+          background: url(../images/main/three-links-front-1.png) no-repeat center bottom;
           background-size: contain;
         }
       }
 
       &.list02 {
         .backplant {
-          background: url(../images/main/three-links-behind-2.png) no-repeat
-            center bottom;
+          background: url(../images/main/three-links-behind-2.png) no-repeat center bottom;
           background-size: contain;
         }
 
         .frontplant {
-          background: url(../images/main/three-links-front-2.png) no-repeat
-            center bottom;
+          background: url(../images/main/three-links-front-2.png) no-repeat center bottom;
           background-size: contain;
         }
       }
 
       &.list03 {
         .backplant {
-          background: url(../images/main/three-links-behind-3.png) no-repeat
-            center bottom;
+          background: url(../images/main/three-links-behind-3.png) no-repeat center bottom;
           background-size: contain;
         }
 
         .frontplant {
-          background: url(../images/main/three-links-front-3.png) no-repeat
-            center bottom;
+          background: url(../images/main/three-links-front-3.png) no-repeat center bottom;
           background-size: contain;
         }
       }
@@ -249,6 +393,7 @@ body {
 
 .gallerys {
   padding: 5rem 0;
+
   &__lists {
     margin: 3rem 0 clamp(6rem, 10vw, 10rem) 0;
 
@@ -359,8 +504,7 @@ body {
         color: $orange;
       }
 
-      .titleInner {
-      }
+      .titleInner {}
     }
 
     .subtitle {
@@ -398,6 +542,7 @@ body {
       }
     }
   }
+
   @include pc {
     &__wrap {
       @include flexStart;
@@ -434,6 +579,7 @@ body {
         display: block;
         height: 100%;
         position: relative;
+
         &:after {
           content: "";
           display: block;
@@ -445,14 +591,17 @@ body {
         background: url(../images/main/bottomItem01.png) no-repeat center;
         background-size: cover;
       }
+
       &.list02 {
         background: url(../images/main/bottomItem02.png) no-repeat center;
         background-size: cover;
       }
+
       &.list03 {
         background: url(../images/main/bottomItem03.png) no-repeat center;
         background-size: cover;
       }
+
       &.list04 {
         background: url(../images/main/bottomItem04.png) no-repeat center;
         background-size: cover;
@@ -469,6 +618,7 @@ body {
         box-sizing: border-box;
         padding: 4rem 2rem 2rem 2rem;
         transition: transform 0.5s;
+
         dl {
           dt {
             font-size: 2.4rem;
@@ -488,8 +638,10 @@ body {
         }
       }
     }
+
     @include pc {
       @include flexStart;
+
       li {
         width: 23.5%;
       }

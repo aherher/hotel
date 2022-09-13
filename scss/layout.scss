@@ -49,7 +49,7 @@ img {
 
 @for $i from 1 through 100 {
   .delay#{$i} {
-    transition-delay: 0.1s * $i !important;
+    transition-delay: 0.1s * $i  !important;
   }
 }
 
@@ -75,6 +75,7 @@ img {
   left: 0;
   width: 100%;
   z-index: 1;
+
   &__logo {
     width: 80%;
     max-width: 58rem;
@@ -86,6 +87,7 @@ img {
   position: absolute;
   top: 0;
   display: none;
+
   @include pc {
     display: block;
   }
@@ -105,4 +107,60 @@ img {
   background: url(../images/common/cage_big.png) no-repeat center;
   left: 50%;
   transform: translateX(60rem);
+}
+
+
+// 푸터
+.footer_wrap {
+  .foot {
+    background-color: #0a2e41;
+    padding: 6rem 0;
+
+    &__btns {
+      text-align: center;
+
+      li {
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+
+        a {
+          color: #fff;
+          font-size: clamp(1.6rem, 3vw, 1.8rem);
+        }
+      }
+    }
+
+    &__logo {
+      width: 31rem;
+      margin: clamp(4rem, 5vw, 7rem) auto;
+    }
+
+    &__info {
+      color: #fff;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+
+    @include pc {
+      &__btns {
+        @include flexAlign;
+        gap: 5rem;
+
+        li {
+          &:not(:last-child) {
+            margin-bottom: 0rem;
+          }
+        }
+      }
+    }
+  }
+
+  .copy {
+    text-align: center;
+    line-height: 1.3;
+    font-size: clamp(1.5rem, 3vw, 1.8rem);
+    height: 8rem;
+    @include flexAlign;
+  }
 }
