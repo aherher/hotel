@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chester Townhouse Hotel</title>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;700&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/db89262daf.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/main.css">
 
@@ -16,19 +17,96 @@
   <!-- 헤더 -->
   <header class="header">
     <h1 class="header__logo"><a href="/"><img src="images/common/logo.svg" alt="Chester Townhouse Hotel"></a></h1>
+
     <div class="header__head">
-      <ul class="header__sns"></ul>
-      <div class="header__menu"></div>
+      <ul class="header__sns">
+        <li><a href="#!"><i class="fa-brands fa-facebook-f"></i></a></li>
+        <li><a href="#!"><i class="fa-brands fa-instagram"></i></a></li>
+      </ul>
+
+      <div class="header__btn">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
+
     <nav class="header__menuWrap">
       <ul class="header__menu">
-        <li></li>
+        <li><a href="#!">
+            <p class="comment source4">hidden gem in the city</p>
+            <p class="menu">Home</p>
+          </a></li>
+        <li><a href="#!">
+            <p class="comment source4">boutique & independent</p>
+            <p class="menu">THE HOTEL</p>
+          </a>
+          <ul class="header__subMenu">
+            <li><a href="#!">The Rooms</a></li>
+            <li><a href="#!">Roman Vault Party Room</a></li>
+            <li><a href="#!">The Area</a></li>
+            <li><a href="#!">Book a Room</a></li>
+          </ul>
+        </li>
+        <li><a href="#!">
+            <p class="comment source4">fresh & wild</p>
+            <p class="menu">THE RESTAURANT</p>
+          </a>
+          <ul class="header__subMenu">
+            <li><a href="#!">Dining</a></li>
+            <li><a href="#!">Book a Table</a></li>
+          </ul>
+        </li>
+        <li><a href="#!">
+            <p class="comment source4">botanical bar</p>
+            <p class="menu">THE SECRET GARDEN</p>
+          </a>
+          <ul class="header__subMenu">
+            <li><a href="#!">The Garden</a></li>
+            <li><a href="#!">The Drinks</a></li>
+            <li><a href="#!">Dog Friendly Destination</a></li>
+          </ul>
+        </li>
+        <li><a href="#!">
+            <p class="comment source4">what’s on…</p>
+            <p class="menu">The Happenings</p>
+          </a>
+        </li>
+        <li><a href="#!">
+            <p class="comment source4">place for celebrations</p>
+            <p class="menu">The Gatherings</p>
+          </a>
+          <ul class="header__subMenu">
+            <li><a href="#!">Occasions</a></li>
+            <li><a href="#!">Parties</a></li>
+            <li><a href="#!">Stag & Hen Parties</a></li>
+            <li><a href="#!">Baby Showers & Christenings</a></li>
+            <li><a href="#!">Celebration of Life</a></li>
+            <li><a href="#!">Packages & Prices</a></li>
+          </ul>
+        </li>
+        <li><a href="#!">
+            <p class="comment source4">get in touch</p>
+            <p class="menu">CONTACT & BOOK</p>
+          </a>
+          <ul class="header__subMenu">
+            <li><a href="#!">Contact us</a></li>
+            <li><a href="#!">Book a Table</a></li>
+            <li><a href="#!">Book a Room</a></li>
+            <li><a href="#!">Buy Gift Vouchers</a></li>
+          </ul>
+        </li>
       </ul>
+      <div class="innerImages">
+        <div class="leaf"></div>
+        <div class="bird01"></div>
+        <div class="bird02"></div>
+      </div>
+      <div class="header__close"><i class="fa-solid fa-xmark"></i></div>
     </nav>
     <div class="cage cageSmall"></div>
     <div class="cage cageBig"></div>
   </header>
-
   <!-- 헤더 끝-->
 
   <main>
@@ -58,7 +136,7 @@
 
     </div>
 
-    <ul class="selects source4">
+    <ul class="selects source4 unMove">
       <li><a href="#!">
           <dl>
             <dt>play</p>
@@ -74,12 +152,12 @@
     </ul>
 
     <div class="mainArticle center_box">
-      <dl class="sectionDl">
+      <dl class="sectionDl unMove">
         <dt>A SECRET HIDEAWAY</dt>
         <dd class="source4">in the heart of Chester</dd>
       </dl>
 
-      <article class="mainArticle__texts">
+      <article class="mainArticle__texts unMove">
         <p class="mb20">The Townhouse & Secret Garden is one of Chester’s hidden gems and one of the best independent hotels in the city.
           Located within the historic Roman walls which encompass the mediaeval centre. The Townhouse & Secret Garden with its
           own townhouse Georgian features with Chester’s famous Tudor and Victorian architecture.
@@ -91,7 +169,11 @@
       </article>
     </div>
 
-    <div class="banners">
+    <div class="wall_img left_leaf">
+      <div></div>
+    </div>
+
+    <div class="banners unMove">
       <div class="center_box">
         <ul class="banners__lists">
           <li class="list01">
@@ -132,14 +214,18 @@
       </div>
     </div>
 
+    <div class="wall_img right_wallflower">
+      <div></div>
+    </div>
+
 
     <div class="gallerys">
       <div class="center_box">
-        <dl class="sectionDl">
+        <dl class="sectionDl unMove">
           <dt>IT'S ALL HAPPENING AT THE TOWNHOUSE SECRET GARDEN</dt>
           <dd>Our Chester Events listings</dd>
         </dl>
-        <ul class="gallerys__lists">
+        <ul class="gallerys__lists unMove">
           <li>
             <a href="#!">
               <div class="gallerys__image">
@@ -181,16 +267,20 @@
       </div>
     </div>
 
+    <div class="wall_img left_wallflower">
+      <div></div>
+    </div>
+
     <div class="notice">
       <div class="center_box">
-        <dl class="sectionDl">
+        <dl class="sectionDl unMove">
           <dt>STAY, PLAY & CELEBRATE</dt>
           <dd class="source4">Just a few reasons why we think you'll like us...</dd>
         </dl>
 
         <div class="notice__wrap">
 
-          <article class="notice__box">
+          <article class="notice__box unMove">
             <p class="title"><span class="number">No.1.</span> <span class="titleInner source4">The perfect Chester location</span></p>
             <p class="subtitle source4">for a break away with everything in walking distance</p>
             <p class="texts">Just moments away from the picturesque River Dee and its beautiful Groves,
@@ -199,14 +289,14 @@
             <a href="#!" class="btn source4">find out more about the area</a>
           </article>
 
-          <article class="notice__box">
+          <article class="notice__box unMove">
             <p class="title"><span class="number">No.2.</span> <span class="titleInner source4">Escape to our enchanted Secret Garden</span></p>
             <p class="subtitle source4">All year round holiday vibes</p>
             <p class="texts">We like to think our garden is just a little bit special offering the very best of the great outdoors whilst ensuring you are always warm & dry too! It’s the heart of our place, an oasis in the city and the focus for our events. It’s also available to hire.</p>
             <a href="#!" class="btn source4">our garden is your garden</a>
           </article>
 
-          <article class="notice__box">
+          <article class="notice__box unMove">
             <p class="title"><span class="number">No.3.</span> <span class="titleInner source4">Our roman vault & amphitheatre apartment</span></p>
             <p class="subtitle source4">space to celebrate</p>
             <p class="texts">Not many places can boast a roman vault that sleeps 10 or an amphitheatre
@@ -216,14 +306,14 @@
             <a href="#!" class="btn source4">find out more about our accommodation</a>
           </article>
 
-          <article class="notice__box">
+          <article class="notice__box unMove">
             <p class="title"><span class="number">No.4.</span> <span class="titleInner source4">Cocktails, Afternoon Tea & Brunch</span></p>
             <p class="subtitle source4">basically the good stuff in life</p>
             <p class="texts">Do one think well, so the saying goes. Well we focus on the good stuff in life – you know the times that you will remember. Whether that’s cocktails on a balmy evening with friends, Afternoon Tea with your mum or a gathering of family.</p>
             <a href="#!" class="btn source4">take a look at our menus</a>
           </article>
 
-          <article class="notice__box">
+          <article class="notice__box unMove">
             <p class="title"><span class="number">No.5.</span> <span class="titleInner source4">The happenings, events and occasions</span></p>
             <p class="subtitle source4">it’s all going on…</p>
             <p class="texts">We love a good get together… spot of live music in our garden over a cocktail or two? Yes please. A night away with old friends and feeling just like you did when you were just 18? A space to hire and call your own for your very own gathering… we do!</p>
@@ -231,7 +321,7 @@
           </article>
 
 
-          <article class="notice__box">
+          <article class="notice__box unMove">
             <p class="title"><span class="number">No.6.</span> <span class="titleInner source4">Dogs are welcome</span></p>
             <p class="subtitle source4">well behaved humans too</p>
             <p class="texts">We are dog people here… we know how important they are, how a wander on the river with your pooch could quite easily just turn out to the best night of cocktails and chats. And frankly, they deserve a night out too!</p>
@@ -243,11 +333,16 @@
       </div>
     </div>
 
+
+    <div class="wall_img right_wallflower2">
+      <div></div>
+    </div>
+
     <div class="bottom">
-      <div class="bottom__title"><span>TAKE A LITTLE AT OUR MENUS</span></div>
+      <div class="bottom__title unMove"><span>TAKE A LITTLE AT OUR MENUS</span></div>
       <div class="center_box">
 
-        <ul class="bottom__lists">
+        <ul class="bottom__lists unMove">
           <li class="list01">
             <a href="#!">
               <div class="features">
@@ -293,6 +388,10 @@
       </div>
     </div>
 
+    <div class="wall_img left_fly">
+      <div></div>
+    </div>
+
   </main>
 
   <footer class="footer_wrap">
@@ -313,7 +412,8 @@
     </div>
     <p class="copy">WEBSITE DESIGNED &amp; BUILT BY DAYDREAM DESIGNS</p>
   </footer>
-
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

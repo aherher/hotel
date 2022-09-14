@@ -74,12 +74,202 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 5;
 
   &__logo {
     width: 80%;
-    max-width: 58rem;
+    max-width: 55rem;
     margin: 0 auto;
+    padding-top: 12rem;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__head {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+    width: 95%;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__sns {
+    display: flex;
+    gap: 1.5rem;
+    margin-right: 3.5rem;
+
+    li {
+      a {
+        color: #fff;
+        font-size: 2rem;
+
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+    width: 2.5rem;
+
+    >div {
+      width: 100%;
+      height: 0.1rem;
+      background-color: #fff;
+      margin-bottom: 0.7rem;
+
+      &:last-child {
+        width: 60%;
+        transition: width 0.3s;
+        margin-bottom: 0;
+      }
+    }
+
+    &:hover {
+      >div:last-child {
+        width: 100%;
+      }
+    }
+
+    &.fixed {
+      position: fixed;
+      top: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 3rem 2.5rem;
+    }
+  }
+
+  &__menuWrap {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #0a2e41;
+    background-image: url(../images/common/menu-stars.png);
+    background-size: 100%;
+    background-position: center;
+    z-index: 5;
+    overflow-y: scroll;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s;
+
+    .innerImages {
+      width: 57.8rem;
+      height: 45.9rem;
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+
+      >div {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%
+      }
+
+      .leaf {
+        background: url(../images/common/menu-leaf.png);
+      }
+
+      .bird01 {
+        background: url(../images/common/menu-flamingo-1.png);
+      }
+
+      .bird02 {
+        background: url(../images/common/menu-flamingo-2.png);
+      }
+    }
+
+    &.opened {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__close {
+    color: $orange;
+    font-size: 4rem;
+    font-weight: 300;
+    position: absolute;
+    right: 2.5%;
+    top: 3rem;
+    cursor: pointer;
+  }
+
+  &__menu {
+    position: absolute;
+    left: 5%;
+    top: 10rem;
+    z-index: 1;
+
+    >li {
+      margin-bottom: 2.5rem;
+
+      >a {
+        color: #fff;
+      }
+
+      .comment {
+        color: $orange;
+        font-size: clamp(1.4rem, 4vw, 2rem);
+        margin-bottom: 0.6em;
+        opacity: 0;
+      }
+
+      .menu {
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        text-transform: uppercase;
+      }
+
+      &:hover {
+        .comment {
+          opacity: 1;
+        }
+      }
+
+      &.on {
+        .comment {
+          opacity: 1;
+        }
+
+        .header__subMenu {
+          margin-top: 2.5rem;
+          max-height: 20rem;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  &__subMenu {
+    margin-top: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+    max-height: 0;
+    overflow: hidden;
+
+    li {
+      margin-bottom: 2.5rem;
+
+      a {
+        color: #fff;
+        font-size: clamp(1.5rem, 4vw, 2rem)
+      }
+    }
   }
 }
 
@@ -127,6 +317,9 @@ img {
         a {
           color: #fff;
           font-size: clamp(1.6rem, 3vw, 1.8rem);
+          &:hover{
+            color:$orange;
+          }
         }
       }
     }
@@ -134,6 +327,9 @@ img {
     &__logo {
       width: 31rem;
       margin: clamp(4rem, 5vw, 7rem) auto;
+      &:hover{
+        transform: scale(1.05);
+      }
     }
 
     &__info {
