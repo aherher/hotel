@@ -3,11 +3,89 @@
 
 body {
   background-color: #f4f1e6;
+  overflow-x: hidden;
 }
 
 main {
   overflow: hidden;
 }
+
+.clouds {
+  >div {
+    position: absolute;
+    animation: moveclouds linear infinite forwards;
+    left: -8%;
+    z-index: 0;
+  }
+
+  .cloud01,
+  .cloud06 {
+    width: 16.7rem;
+    height: 4.6rem;
+    background: url(../images/main/cloud1.png);
+  }
+
+  .cloud02,
+  .cloud05 {
+    width: 10rem;
+    height: 2.8rem;
+    background: url(../images/main/cloud2.png);
+  }
+
+  .cloud03,
+  .cloud04 {
+    width: 10rem;
+    height: 2.8rem;
+    background: url(../images/main/cloud3.png);
+  }
+
+  .cloud01 {
+    top: 2rem;
+    animation-duration: 20s;
+  }
+
+  .cloud02 {
+    top: 10rem;
+    animation-delay: 1s;
+    animation-duration: 16s;
+  }
+
+
+  .cloud03 {
+    top: 25rem;
+    animation-duration: 18s;
+  }
+
+  .cloud04 {
+    top: 10rem;
+    animation-delay: 2.5s;
+    animation-duration: 28s;
+  }
+
+  .cloud05 {
+    top: 30rem;
+    animation-delay: 1.5s;
+    animation-duration: 22s;
+  }
+
+  .cloud06 {
+    top: 40rem;
+    animation-duration: 25s;
+  }
+
+}
+
+
+@keyframes moveclouds {
+  0% {
+    left: -8%
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
 
 .mainVisual {
   background: url(../images/main/background-twilight.png);
@@ -16,7 +94,11 @@ main {
   position: relative;
   z-index: 0;
   pointer-events: none;
-  margin-bottom: 30rem;
+  margin-bottom: 25rem;
+
+  @include mobileOnly {
+    height: 50rem;
+  }
 
   &__wrap {
     @include centerX(absolute);
@@ -27,6 +109,20 @@ main {
     >div {
       position: absolute;
       left: 50%;
+
+      &:not(.building) {
+        transition: transform 1s;
+        transform: rotate(-3deg) scale(0);
+      }
+
+      &.active {
+        transform: rotate(-3deg) scale(1);
+      }
+    }
+
+    @include mobileOnly {
+      transform: translateX(-50%) scale(0.5);
+      transform-origin: bottom;
     }
   }
 
@@ -35,23 +131,28 @@ main {
     height: 25.2rem;
     background: url(../images/main/left_leaf01.png) no-repeat;
     bottom: 10%;
-    transform: translateX(-200%);
+    margin-left: -51rem;
+    animation: siwng 2s ease-in-out infinite alternate;
+    animation-delay: 2s;
+    transform-origin: right;
   }
 
   .rightBird {
     width: 14.8rem;
     height: 22.4rem;
     background: url(../images/main/bird.png) no-repeat;
-    bottom: 10%;
-    transform: translateX(200%);
+    bottom: 2%;
+    margin-left: 45rem;
   }
 
   .bottom_left_leaf {
     width: 18.8rem;
     height: 22.4rem;
     background: url(../images/main/bottom-left-leaf.png) no-repeat;
-    bottom: 0%;
-    transform: translateX(-200%);
+    bottom: -8rem;
+    margin-left: -45rem;
+    animation: siwng 1s ease-in-out infinite alternate;
+    animation-delay: 2s;
   }
 
   .leftFlower {
@@ -59,15 +160,17 @@ main {
     height: 22.4rem;
     background: url(../images/main/left-flower.png) no-repeat;
     bottom: 0%;
-    transform: translateX(-200%);
+    margin-left: -40rem;
   }
 
   .bottom_right_leaf {
-    width: 32.0rem;
-    height: 34.4rem;
+    width: 33.4rem;
+    height: 30.2rem;
     background: url(../images/main/bottom_right_leaf.png) no-repeat;
     bottom: -20%;
-    transform: translateX(50%);
+    margin-left: 20rem;
+    animation: siwng 2s ease-in-out infinite alternate;
+    animation-delay: 2s;
   }
 
   .right_plant {
@@ -75,7 +178,9 @@ main {
     height: 38.7rem;
     background: url(../images/main/right_plant.png) no-repeat;
     bottom: 0%;
-    transform: translateX(150%);
+    margin-left: 35rem;
+    animation: siwng 2s ease-in-out infinite alternate;
+    animation-delay: 2s;
   }
 
 
@@ -83,33 +188,47 @@ main {
     width: 28.1rem;
     height: 28.1rem;
     background: url(../images/main/right_leaf.png) no-repeat;
-    bottom: 0%;
-    transform: translateX(80%);
+    bottom: 5%;
+    margin-left: 28rem;
+    animation: siwng 2.5s ease-in-out infinite alternate;
+    animation-delay: 2s;
+    transform-origin: left;
   }
 
+  .right_flower {
+    width: 28.1rem;
+    height: 28.1rem;
+    background: url(../images/main/right_flower.png) no-repeat;
+    bottom: -8%;
+    margin-left: 38rem;
+  }
 
   .flamingos {
     width: 19.6rem;
     height: 26.7rem;
     background: url(../images/main/flamingos.gif) no-repeat;
     bottom: 0%;
-    transform: translateX(-80%);
+    margin-left: -28em;
   }
 
   .bottom_leaf_one {
     width: 24rem;
     height: 18.4rem;
     background: url(../images/main/bottom_leaf_one.png) no-repeat;
-    bottom: -10%;
-    transform: translateX(-110%);
+    bottom: -15%;
+    margin-left: -32em;
+    animation: siwng 1.6s ease-in-out infinite alternate;
+    animation-delay: 2s;
   }
 
   .bottom_leaf_two {
     width: 25.5rem;
     height: 30.0rem;
     background: url(../images/main/bottom_leaf_two.png) no-repeat;
-    bottom: -20%;
-    transform: translateX(-80%);
+    margin-left: -20rem;
+    bottom: -30%;
+    animation: siwng 2.5s ease-in-out infinite alternate;
+    animation-delay: 2s;
   }
 
   .bottom_leaf_three {
@@ -117,47 +236,44 @@ main {
     height: 15.9rem;
     background: url(../images/main/bottom_leaf_three.png) no-repeat;
     bottom: -10%;
-    transform: translateX(-40%);
+    margin-left: -5rem;
+    animation: siwng 2s ease-in-out infinite alternate;
+    animation-delay: 2s;
   }
 
-  .bottom_left_lower {
+  .bottom_left_flower {
     width: 27.5rem;
     height: 15.9rem;
     background: url(../images/main/bottom_left_flower.png) no-repeat;
     bottom: -10%;
-    transform: translateX(-120%);
+    margin-left: -35rem;
   }
 
-  .bottom_left_lower {
-    width: 27.5rem;
-    height: 15.9rem;
-    background: url(../images/main/bottom_left_flower.png) no-repeat;
-    bottom: -10%;
-    transform: translateX(-120%);
-  }
 
   .bottom_right_butterfly {
     width: 27.5rem;
     height: 15.9rem;
     background: url(../images/main/bottom_right_butterfly.png) no-repeat;
-    bottom: 00%;
-    transform: translateX(80%);
+    bottom: 0%;
+    margin-left: 25rem;
+    animation: siwng 2.5s ease-in-out infinite alternate;
+    animation-delay: 2s;
   }
 
   .bottom_right_flower {
     width: 13.7rem;
     height: 10.7rem;
     background: url(../images/main/bottom_right_flower.png) no-repeat;
-    bottom: 00%;
-    transform: translateX(120%);
+    bottom: -3rem;
+    margin-left: 18rem;
   }
 
   .bottom_flowers {
     width: 23.9rem;
     height: 25.5rem;
     background: url(../images/main/bottom_flowers.png) no-repeat;
-    bottom: -15%;
-    transform: translateX(-30%);
+    bottom: -15rem;
+    margin-left: -15rem;
   }
 
   .left_butterfly {
@@ -165,15 +281,15 @@ main {
     height: 6.5rem;
     background: url(../images/main/left_butterfly.png) no-repeat;
     bottom: 30%;
-    transform: translateX(-350%);
+    margin-left: -30rem;
   }
 
   .middle_butterfly {
     width: 7.9rem;
     height: 7.0rem;
     background: url(../images/main/middle_butterfly.png) no-repeat;
-    bottom: 10%;
-    transform: translateX(-250%);
+    bottom: 2rem;
+    margin-left: -15rem;
   }
 
 
@@ -181,23 +297,23 @@ main {
     width: 3.6rem;
     height: 3.2rem;
     background: url(../images/main/butterfly_right.png) no-repeat;
-    bottom: 40%;
-    transform: translateX(250%);
+    bottom: 35rem;
+    margin-left: 23rem;
   }
 
   .building {
+    width: 65.3rem;
+    height: 44.6rem;
     background: url(../images/main/building.png);
-    background-size: cover;
-    width: 60%;
-    max-width: 65rem;
+    margin-left: -32.6rem;
     bottom: 0;
-    @include centerX(absolute);
 
-    &:after {
-      content: "";
-      display: block;
-      padding-bottom: 68.30015313936%;
-    }
+
+    // &:after {
+    //   content: "";
+    //   display: block;
+    //   padding-bottom: 68.30015313936%;
+    // }
   }
 }
 
@@ -262,8 +378,6 @@ main {
 
 .mainArticle {
   text-align: center;
-  // width: 95%;
-  // max-width: 120rem;
   margin: clamp(7rem, 4vw, 150rem) auto;
 
   &__texts {
@@ -286,15 +400,21 @@ main {
     transform: scale(0);
     transition: transform 1s;
   }
-}
 
-.acting {
-  opacity: 1;
+  &.acting {
+    opacity: 1;
 
-  div {
-    transform: scale(1);
+    div {
+      transform: scale(1);
+    }
+  }
+
+  @include mobileOnly {
+    display: none;
   }
 }
+
+
 
 .left_leaf {
   width: 29.5rem;
@@ -315,7 +435,7 @@ main {
   margin-top: 40rem;
 
   div {
-    background: url(../images/main/right_flower.png) no-repeat;
+    background: url(../images/main/right_allflower.png) no-repeat;
     transform-origin: right;
   }
 }
@@ -377,11 +497,17 @@ main {
         position: absolute;
         bottom: 0;
         z-index: 0;
+        transform: scale(0);
+        transition: transform 1s;
 
         &:after {
           content: "";
           display: block;
           // padding-bottom: 75.39130434783%;
+        }
+
+        &.acting {
+          transform: scale(1);
         }
       }
 
@@ -392,13 +518,21 @@ main {
         bottom: 0;
         z-index: 1;
         pointer-events: none;
+        opacity: 0;
+        transition: opacity 1s;
+        transition-delay: 0.5s;
 
         &:after {
           content: "";
           display: block;
           // padding-bottom: 23.32474226804%;
         }
+
+        &.acting {
+          opacity: 1;
+        }
       }
+
 
       &.list01 {
         .backplant {
@@ -435,6 +569,7 @@ main {
           background-size: contain;
         }
       }
+
     }
   }
 
@@ -486,10 +621,10 @@ main {
 
 .gallerys {
   padding: 5rem 0;
-  transform: translateY(5rem);
 
   &__lists {
     margin: 3rem 0 clamp(6rem, 10vw, 10rem) 0;
+    transform: translateY(5rem);
 
     li {
       margin-bottom: 3rem;

@@ -60,7 +60,7 @@ const unMove = document.querySelectorAll(".unMove")
 
 
 function doScroll() {
-  let windowHeight = window.innerHeight / 1.5
+  let windowHeight = window.innerHeight / 1.3
   moverWrap.forEach((item) => {
     let itemTop = item.getBoundingClientRect().top
     if (windowHeight > itemTop) {

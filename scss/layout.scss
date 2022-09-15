@@ -163,7 +163,7 @@ img {
     overflow-y: scroll;
     opacity: 0;
     visibility: hidden;
-    transition: all 1s;
+    transition: opacity 1s;
 
     .innerImages {
       width: 57.8rem;
@@ -172,6 +172,7 @@ img {
       right: 0;
       bottom: 0;
       z-index: 0;
+      display: none;
 
       >div {
         position: absolute;
@@ -191,6 +192,10 @@ img {
 
       .bird02 {
         background: url(../images/common/menu-flamingo-2.png);
+      }
+
+      @include pc {
+        display: block;
       }
     }
 
@@ -281,14 +286,29 @@ img {
   @include pc {
     display: block;
   }
+
+  animation:siwng 2s ease-in-out infinite alternate
 }
+
+
+@keyframes siwng {
+  0% {
+    transform: rotate(-3deg);
+  }
+
+  100% {
+    transform: rotate(3deg);
+  }
+}
+
 
 .cageSmall {
   width: 11.4rem;
   height: 25rem;
   background: url(../images/common/cage_small.png) no-repeat center;
   left: 50%;
-  transform: translateX(-70rem);
+  top: -5rem;
+  margin-left: -70rem;
 }
 
 .cageBig {
@@ -296,7 +316,9 @@ img {
   height: 49rem;
   background: url(../images/common/cage_big.png) no-repeat center;
   left: 50%;
-  transform: translateX(60rem);
+  top: -18rem;
+  margin-left: 60rem;
+  animation-delay: 0.5s;
 }
 
 
@@ -317,8 +339,9 @@ img {
         a {
           color: #fff;
           font-size: clamp(1.6rem, 3vw, 1.8rem);
-          &:hover{
-            color:$orange;
+
+          &:hover {
+            color: $orange;
           }
         }
       }
@@ -327,7 +350,8 @@ img {
     &__logo {
       width: 31rem;
       margin: clamp(4rem, 5vw, 7rem) auto;
-      &:hover{
+
+      &:hover {
         transform: scale(1.05);
       }
     }
